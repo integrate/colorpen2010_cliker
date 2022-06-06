@@ -1,4 +1,4 @@
-import pygame,help,textures,random
+import pygame,help,random
 coins = 0
 upgrade=0
 randi=2

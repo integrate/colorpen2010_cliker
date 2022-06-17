@@ -6,17 +6,21 @@ pygame.display.set_caption("Жизнь попрошайки")
 zagryschaem_shrift = pygame.font.SysFont('arial', 35, True)
 cveta = [243, 30, 15]
 # загружаем картинку фона
-fon = pygame.image.load('cliker_kartinki/BOMJ.png')
-fon = help.izmeni_kartinku(fon, 200, 200, [255, 255, 255], 20)
-pygame.display.flip()
+if models.upgrade == 18:
+    fon = pygame.image.load('cliker_kartinki/metro-london-foto1.jpg')
+    fon = help.izmeni_kartinku(fon, 200, 200, [255, 255, 255], 20)
+
 
 dengi = pygame.image.load('cliker_kartinki/coin_PNG36887.png')
+dengi = help.izmeni_kartinku(dengi, 50, 50, [255, 255, 255], 20)
+d = ','
+dengi = pygame.image.load('cliker_kartinki/BOMJ.png')
 dengi = help.izmeni_kartinku(dengi, 50, 50, [255, 255, 255], 20)
 d = ','
 
 
 def money():
-    global cveta
+    global cveta,fon
     if models.upgrade == 18:
         cveta = [243, 30, 15]
     pygame.draw.rect(screen, cveta, models.knopka1)  # рисует кнопку 1
@@ -34,3 +38,4 @@ def money():
     screen.blit(dengi, [0, 1])
     pygame.display.flip()
     screen.fill([255, 255, 255])
+

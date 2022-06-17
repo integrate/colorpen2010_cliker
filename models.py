@@ -13,8 +13,11 @@ def tipo_def():
         randy += 2
         coins -= upgrade_coins
         upgrade_coins += int(upgrade_coins / 10)
+        if upgrade == 17:
+            upgrade_coins = 1152
+        if upgrade == 18:
+            upgrade_coins = 39
+
+            randi += 12
+            randy += 12
         print('upgrade ' + str(upgrade))
-    if upgrade == 17:
-        upgrade_coins = 1152
-    if upgrade == 18:
-        upgrade_coins = 39

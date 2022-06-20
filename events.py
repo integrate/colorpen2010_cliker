@@ -9,3 +9,5 @@ def a____s():
             y = i.pos[1]
             if models.knopka1.collidepoint(x,y):
                 models.tipo_def()
+            if models.knopka2.collidepoint(x,y):
+                exit()

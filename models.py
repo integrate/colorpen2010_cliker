@@ -6,6 +6,7 @@ randy=0
 upgrade_coins=10
 knopka1=pygame.Rect(100,500,175,50)
 knopka2=pygame.Rect(1000,0,175,50)
+naem1=pygame.Rect(960,540,375,50)
 def tipo_def():
     global coins, upgrade_coins,upgrade,randy,randi
     if coins >= upgrade_coins:

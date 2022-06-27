@@ -16,13 +16,16 @@ bomj = pygame.image.load('cliker_kartinki/BOMJ.png')
 bomj = help.izmeni_kartinku(bomj, 350, 350, [255, 255, 255], 20)
 d = ','
 
+if models.naemnik1 == True:
+        rabothi1=pygame.image.load('cliker_kartinki/lll2.jpg')
+        screen.blit(rabothi1,[400,100])
 
 def money():
     global cveta, fon
     if models.upgrade == 18:
         cveta = [243, 30, 15]
     rec = zagryschaem_shrift. render(str(models.upgrade_coins), True, [34, 54, 43])  # рисует картинку с ценой upgrade
-    nemrobotnika1=zagryschaem_shrift.render('наём бродяего музыканта', True, [34, 54, 43],)
+    nemrobotnika1=zagryschaem_shrift.render("наём бродячего музыканта стои - 10000", True, [34, 54, 43],)
     recxit = zagryschaem_shrift.render('          X', True, [34, 54, 43])  # рисует картинку с ценой upgrade
     pygame.image.save(rec,'rec.png')
     monetkis = zagryschaem_shrift.render(str(models.coins), True, [34, 54, 43])

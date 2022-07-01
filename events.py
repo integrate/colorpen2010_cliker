@@ -12,5 +12,4 @@ def a____s():
             if models.knopka2.collidepoint(x,y):
                 exit()
             if models.naem1.collidepoint(x,y):
-                print('тебя обмануули зря потратил деньги')
                 models.naim1()

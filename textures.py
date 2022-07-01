@@ -16,16 +16,19 @@ bomj = pygame.image.load('cliker_kartinki/BOMJ.png')
 bomj = help.izmeni_kartinku(bomj, 350, 350, [255, 255, 255], 20)
 d = ','
 
-if models.naemnik1 == True:
-        rabothi1=pygame.image.load('cliker_kartinki/lll2.jpg')
-        screen.blit(rabothi1,[400,100])
+rabothi1 = pygame.image.load('cliker_kartinki/lll2.jpg')
+rabothi1 = help.izmeni_kartinku(rabothi1, 540, 540, [255, 255, 255], 60)
+d = ','
 
 def money():
     global cveta, fon
     if models.upgrade == 18:
         cveta = [243, 30, 15]
     rec = zagryschaem_shrift. render(str(models.upgrade_coins), True, [34, 54, 43])  # рисует картинку с ценой upgrade
-    nemrobotnika1=zagryschaem_shrift.render("наём бродячего музыканта стои - 10000", True, [34, 54, 43],)
+    if models.naemnik1 == False:
+        nemrobotnika1=zagryschaem_shrift.render("наём бродячего музыканта стои - 10000", True, [34, 54, 43],)
+    if models.naemnik1 == True:
+        nemrobotnika1=zagryschaem_shrift.render("апгрэйд стоит - 10000", True, [34, 54, 43],)
     recxit = zagryschaem_shrift.render('          X', True, [34, 54, 43])  # рисует картинку с ценой upgrade
     pygame.image.save(rec,'rec.png')
     monetkis = zagryschaem_shrift.render(str(models.coins), True, [34, 54, 43])
@@ -41,11 +44,13 @@ def money():
     screen.blit(fon, [0, 0])
     pygame.draw.rect(screen, cveta, models.knopka1)  # рисует кнопку 1
     pygame.draw.rect(screen, cveta, models.knopka2)  # рисует кнопку 2
-    pygame.draw.rect(screen, cveta, models.naem1)  # рисует надпись покупки бродячего
+    pygame.draw.rect(screen, cveta, models.naem1)  # рисует кнопку покупки
     screen.blit(monetkis, [60, 5])
+    if models.naemnik1 == True:
+        screen.blit(rabothi1, [150, 500])
     screen.blit(recxit,models.knopka2)
     screen.blit(rec, models.knopka1)  # рисует натписи на кнопке апгрэйд
-    screen.blit(nemrobotnika1, models.naem1)
+    screen.blit(nemrobotnika1, models.naem1)#пишит на кнопке купи музыканта
     screen.blit(skoko_polythis, [550, 500])
     screen.blit(dengi, [0, 1])
     screen.blit(bomj, [0, 730])

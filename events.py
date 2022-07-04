@@ -1,4 +1,6 @@
 import pygame, help, models, textures,random,models
+TIMER_COINS=pygame.event.custom_type()#номер события
+pygame.time.set_timer(TIMER_COINS,1000,1)#запускаем таймер
 def a____s():
     okno_ne_oret = pygame.event.get()
     for i in okno_ne_oret:
@@ -13,3 +15,8 @@ def a____s():
                 exit()
             if models.naem1.collidepoint(x,y):
                 models.naim1()
+        if i.type == TIMER_COINS:
+            pygame.time.set_timer(TIMER_COINS, 1000, 1)  # запускаем таймер
+        if models.naemnik1 == True:
+            if i.type == TIMER_COINS:
+                models.coins+=models.givz_namnik1

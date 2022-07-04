@@ -26,13 +26,14 @@ def money():
         cveta = [243, 30, 15]
     rec = zagryschaem_shrift. render(str(models.upgrade_coins), True, [34, 54, 43])  # рисует картинку с ценой upgrade
     if models.naemnik1 == False:
-        nemrobotnika1=zagryschaem_shrift.render("наём бродячего музыканта стои - 10000", True, [34, 54, 43],)
+        nemrobotnika1=zagryschaem_shrift.render("наём бродячего музыканта стои - "+str(models.zena_naemnika1), True, [34, 54, 43],)
     if models.naemnik1 == True:
-        nemrobotnika1=zagryschaem_shrift.render("апгрэйд стоит - 10000", True, [34, 54, 43],)
+        nemrobotnika1=zagryschaem_shrift.render("апгрэйд стоит - "+str(models.zena_naemnika1), True, [34, 54, 43],)
     recxit = zagryschaem_shrift.render('          X', True, [34, 54, 43])  # рисует картинку с ценой upgrade
-    pygame.image.save(rec,'rec.png')
     monetkis = zagryschaem_shrift.render(str(models.coins), True, [34, 54, 43])
     skoko_polythis = zagryschaem_shrift.render('за щелчок даётся - ' + str(models.randy) + d + str(models.randi), True,[34, 54, 43],[255,255,255])
+    skoko_zarabotaix1 = zagryschaem_shrift.render('за секунду дается - ' + str(models.givz_namnik1)
+                                                  , True,[34, 54, 43], [255, 255, 255])
     if models.upgrade == 17:
         cveta = [103, 30, 176]  # фиолетовый
         rec = zagryschaem_shrift.render(str(1152), True,[34, 54, 43])  # создаёт картинку с  ценой upgrade
@@ -52,6 +53,7 @@ def money():
     screen.blit(rec, models.knopka1)  # рисует натписи на кнопке апгрэйд
     screen.blit(nemrobotnika1, models.naem1)#пишит на кнопке купи музыканта
     screen.blit(skoko_polythis, [550, 500])
+    screen.blit(skoko_zarabotaix1, [1050, 500])
     screen.blit(dengi, [0, 1])
     screen.blit(bomj, [0, 730])
     pygame.display.flip()

@@ -8,9 +8,9 @@ zena_naemnika1=10000
 naemnik_level1=1
 givz_namnik1=0
 upgrade_coins=10
-knopka1=pygame.Rect(100,500,175,50)
-knopka2=pygame.Rect(1000,0,175,50)
-naem1=pygame.Rect(960,540,575,50)
+knopka1=pygame.Rect(100/1.5,500/1.5,175/1.5,50)
+knopka2=pygame.Rect(1000/1.5,0,175,50)
+naem1=pygame.Rect(960/1.5,540/1.5,575/1.5,50)
 def naim1():
     global naemnik1,coins,zena_naemnika1,givz_namnik1,naemnik_level1
     if coins >= zena_naemnika1:

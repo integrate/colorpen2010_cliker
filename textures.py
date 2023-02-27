@@ -1,23 +1,23 @@
 import pygame, help, models, models
 
 pygame.init()
-screen = pygame.display.set_mode([1920, 1080])
+screen = pygame.display.set_mode([1920/1.5, 1080/1.5])
 pygame.display.set_caption("Жизнь попрошайки")
 zagryschaem_shrift = pygame.font.SysFont('arial', 35, True)
 cveta = [243, 30, 15]
 fon = pygame.image.load('cliker_kartinki/pereylok1.jpg')
-fon = help.izmeni_kartinku(fon, 1920, 1080, [255, 255, 255], 20)
+fon = help.izmeni_kartinku(fon, 1920/1.5, 1080/1.5, [255, 255, 255], 20)
 # загружаем картинку фона
 
 dengi = pygame.image.load('cliker_kartinki/coin_PNG36887.png')
 dengi = help.izmeni_kartinku(dengi, 50, 50, [255, 255, 255], 20)
 d = ','
 bomj = pygame.image.load('cliker_kartinki/BOMJ.png')
-bomj = help.izmeni_kartinku(bomj, 350, 350, [255, 255, 255], 20)
+bomj = help.izmeni_kartinku(bomj, 350/1.5, 350/1.5, [255, 255, 255], 20)
 d = ','
 
 rabothi1 = pygame.image.load('cliker_kartinki/lll2.jpg')
-rabothi1 = help.izmeni_kartinku(rabothi1, 540, 540, [255, 255, 255], 60)
+rabothi1 = help.izmeni_kartinku(rabothi1, 540/1.5, 540/1.5, [255, 255, 255], 60)
 d = ','
 
 def money():
@@ -40,7 +40,7 @@ def money():
 
     if models.upgrade == 18:
         fon = pygame.image.load('cliker_kartinki/metro-london-foto1.jpg')
-        fon = help.izmeni_kartinku(fon, 1920, 1080, [255, 255, 255], 20)
+        fon = help.izmeni_kartinku(fon, 1920/1.5, 1080/1.5, [255, 255, 255], 20)
 
     screen.blit(fon, [0, 0])
     pygame.draw.rect(screen, cveta, models.knopka1)  # рисует кнопку 1
@@ -48,13 +48,13 @@ def money():
     pygame.draw.rect(screen, cveta, models.naem1)  # рисует кнопку покупки
     screen.blit(monetkis, [60, 5])
     if models.naemnik1 == True:
-        screen.blit(rabothi1, [150, 500])
+        screen.blit(rabothi1, [150/1.5, 500/1.5])
     screen.blit(recxit,models.knopka2)
     screen.blit(rec, models.knopka1)  # рисует натписи на кнопке апгрэйд
     screen.blit(nemrobotnika1, models.naem1)#пишит на кнопке купи музыканта
     screen.blit(skoko_polythis, [550, 500])
-    screen.blit(skoko_zarabotaix1, [1050, 500])
+    screen.blit(skoko_zarabotaix1, [550, 550])
     screen.blit(dengi, [0, 1])
-    screen.blit(bomj, [0, 730])
+    screen.blit(bomj, [0, 730/1.5])
     pygame.display.flip()
     screen.fill([255, 255, 255])

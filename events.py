@@ -4,6 +4,8 @@ pygame.time.set_timer(TIMER_COINS,1000,1)#запускаем таймер
 def a____s():
     okno_ne_oret = pygame.event.get()
     for i in okno_ne_oret:
+        if i.type == pygame.QUIT:
+            exit()
         if i.type == pygame.MOUSEBUTTONDOWN and i.button == pygame.BUTTON_LEFT:
             models.coins += random.randint(models.randy,models.randi)
         if i.type == pygame.MOUSEBUTTONDOWN and i.button == pygame.BUTTON_LEFT:
